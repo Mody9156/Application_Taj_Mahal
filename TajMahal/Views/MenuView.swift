@@ -17,28 +17,12 @@ struct MenuView: View {
             VStack {
                 Text("Menus").fontWeight(.bold)
                 List {// utilisation de l'autre manière d'incrémenter un tableau avec foreach
-                    Section("Entrées") {
+                    Section("Entrées") {// titre de la setion
                         ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
-                            HStack {
-                                Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
-                                
-                                VStack(alignment: .leading) {
-                                    Text(apetizer.name)
-                                        .font(.title3).foregroundColor(.gray).fontWeight(.bold)
-                                    Text(apetizer.description).foregroundColor(.gray)
-                                    HStack{
-                                        Image("\(apetizer.spiceLevel)")
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    Section("Plats Principaux") {
-                        ForEach(viewModel.mainCourseArray ,id:\.id){ apetizer in
+                            
                             NavigationLink {
-                                Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                             } label: {
-                                
                                 HStack {
                                     Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                                     
@@ -50,8 +34,30 @@ struct MenuView: View {
                                             Image("\(apetizer.spiceLevel)")
                                         }
                                     }
-                                }.frame(width: 335, height: 110).cornerRadius(10)
+                                }
                             }
+                            
+                        }
+                    }
+                    Section("Plats Principaux") {// titre de la setion
+                        ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
+                            NavigationLink {
+                                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                            } label: {
+                                
+                                HStack {
+                                    Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text(mainCourse.name)
+                                            .font(.title3).foregroundColor(.gray).fontWeight(.bold)
+                                        Text(mainCourse.description).foregroundColor(.gray)
+                                        HStack{
+                                            Image("\(mainCourse.spiceLevel)")
+                                        }
+                                    }
+                                }.frame(width: 335, height: 110).cornerRadius(10)
+                            }.navigationBarTitle(mainCourse.imageName)
 
                         }
                     }
