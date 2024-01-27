@@ -21,7 +21,7 @@ struct MenuView: View {
                         ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
                             
                             NavigationLink {
-                                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                                Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                             } label: {
                                 HStack {
                                     Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
