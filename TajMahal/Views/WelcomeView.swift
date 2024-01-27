@@ -9,6 +9,7 @@ import SwiftUI
 
 // Page d'accueil
 struct WelcomeView: View {
+    
     @State var name : String  = ""
     @State var icone : String = ""
     @State var moreNews  : String = ""
