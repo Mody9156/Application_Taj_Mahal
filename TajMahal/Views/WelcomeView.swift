@@ -50,7 +50,7 @@ struct WelcomeView: View {
                     Text("Accéder au menu").fontWeight(.bold).foregroundColor(.white)
                 }
                
-            }
+            }.navigationTitle("")
         }
     }
 }

@@ -15,7 +15,7 @@ struct MenuView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Menus").fontWeight(.bold)
+                Text("Menus").fontWeight(.bold).font(.title2)
                 List {// utilisation de l'autre manière d'incrémenter un tableau avec foreach
                     Section("Entrées") {// titre de la setion
                         ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
@@ -37,7 +37,7 @@ struct MenuView: View {
                                 }
                             }
                             
-                        }
+                        }.frame(width: 335, height: 110)
                     }
                     Section("Plats Principaux") {// titre de la setion
                         ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
@@ -56,10 +56,10 @@ struct MenuView: View {
                                             Image("\(mainCourse.spiceLevel)")
                                         }
                                     }
-                                }.frame(width: 335, height: 110).cornerRadius(10)
-                            }.navigationBarTitle(mainCourse.imageName)
+                                }
+                            }
 
-                        }
+                        }.frame(width: 335, height: 110)
                     }
                 }
                     
