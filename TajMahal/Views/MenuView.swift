@@ -24,26 +24,27 @@ struct MenuView: View {
                                 Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                             } label: {
                                 HStack {
-                                    Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                                    Image("\(apetizer.imageName)").resizable().frame(width: 128.84,height: 86).cornerRadius(10)
                                     
                                     VStack(alignment: .leading) {
                                         Text(apetizer.name)
                                             .font(.title3).foregroundColor(.gray).fontWeight(.bold)
                                         Text(apetizer.description).foregroundColor(.gray)
                                         HStack{
-                                            Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))")//format number permet de manipuler l'affichage du nombre
+                                            Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))€")//format number permet de manipuler l'affichage du nombre
+                                            Spacer()
                                             Image("\(apetizer.spiceLevel)")
                                         }
                                     }
                                 }
                             }
                             
-                        }.frame(width: 335, height: 110)
+                        }
                     }
                     Section("Plats Principaux") {// titre de la setion
                         ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
                             NavigationLink {
-                                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+                                Image("\(mainCourse.imageName)").resizable().frame(width: 128.84,height: 86).cornerRadius(10)
                             } label: {
                                 
                                 HStack {
@@ -54,14 +55,15 @@ struct MenuView: View {
                                             .font(.title3).foregroundColor(.gray).fontWeight(.bold)
                                         Text(mainCourse.description).foregroundColor(.gray)
                                         HStack{
-                                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))")//format number permet de manipuler l'affichage du nombre
+                                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€")//format number permet de manipuler l'affichage du nombre
+                                            Spacer()
                                             Image("\(mainCourse.spiceLevel)")
                                         }
                                     }
                                 }
                             }
 
-                        }.frame(width: 335, height: 110)
+                        }
                     }
                 }
                     

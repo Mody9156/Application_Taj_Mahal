@@ -8,10 +8,10 @@
 import Foundation
 
 // Cette enumération répertorie 3 niveaux de piment
-enum SpiceLevel {
-    case light
-    case medium
-    case hot
+enum SpiceLevel : String{
+    case light = "light"
+    case medium = "medium"
+    case hot = "hot"
 }
 
 // Représente l'objet "plat", qui figure sur la carte du menu
