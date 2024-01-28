@@ -31,6 +31,7 @@ struct MenuView: View {
                                             .font(.title3).foregroundColor(.gray).fontWeight(.bold)
                                         Text(apetizer.description).foregroundColor(.gray)
                                         HStack{
+                                            Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))")//format number permet de manipuler l'affichage du nombre
                                             Image("\(apetizer.spiceLevel)")
                                         }
                                     }
@@ -53,6 +54,7 @@ struct MenuView: View {
                                             .font(.title3).foregroundColor(.gray).fontWeight(.bold)
                                         Text(mainCourse.description).foregroundColor(.gray)
                                         HStack{
+                                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))")//format number permet de manipuler l'affichage du nombre
                                             Image("\(mainCourse.spiceLevel)")
                                         }
                                     }
