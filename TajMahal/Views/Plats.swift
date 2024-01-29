@@ -26,7 +26,7 @@ struct Plats: View {
                             HStack{
                                 Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€")//format number permet de manipuler l'affichage du nombre
                                 Spacer()
-                                Image("\(mainCourse.spiceLevel)")
+                                Image("\(mainCourse.spiceLevel)").resizable().frame(width: 52, height: 12)
                             }
                         }
                     }
