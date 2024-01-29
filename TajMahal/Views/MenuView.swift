@@ -19,7 +19,7 @@ struct MenuView: View {
                     Entree()
                     Plats()
                     
-                    }
+                }.background(.black)
                 }
                     
                 
