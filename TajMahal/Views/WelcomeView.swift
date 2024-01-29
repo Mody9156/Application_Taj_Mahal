@@ -16,7 +16,7 @@ struct WelcomeView: View {
     var body: some View {
         NavigationStack {
             VStack{
-                Image("TajMahal").frame(width: 335,height: 508)//picture for the view
+                Image("TajMahal").frame(width: 335,height: 423)//picture for the view
               
                 HStack {
                     Spacer()
