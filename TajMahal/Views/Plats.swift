@@ -13,8 +13,8 @@ struct Plats: View {
         Section(header:Text("Plats Principaux")) {// titre de la setion
             ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
                 NavigationLink {
-                    ScrollView{
-                        VStack(alignment: .leading) {
+                
+                    VStack {
                             Image("\(mainCourse.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(10)
                             
                             VStack(alignment: .leading) {
@@ -24,9 +24,8 @@ struct Plats: View {
                             
                             VStack (alignment: .leading){
                                 Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold)
-                                    .multilineTextAlignment(.leading)
+                                    
                                 Text(mainCourse.ingredients).foregroundColor(.gray)
-                            }
                             
                         }
                     }.navigationTitle(mainCourse.imageName)
