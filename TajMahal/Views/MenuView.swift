@@ -13,16 +13,16 @@ struct MenuView: View {
     let viewModel: ViewModel = ViewModel()
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Menus").fontWeight(.bold).font(.title2)
+            VStack(alignment: .center) {
                 List {// utilisation de l'autre manière d'incrémenter un tableau avec foreach
-                  
+                    
                     Entree()
-              
+                    
                     Plats()
-                
+                    
                 }
-            }
+            }.navigationBarTitle("Menus")
+
         }
     }
         
