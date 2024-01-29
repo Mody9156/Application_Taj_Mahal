@@ -18,7 +18,7 @@ struct Entree: View {
                     Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fit).frame(width: 112,height: 86).cornerRadius(10)
                 } label: {
                     HStack {
-                        Image("\(apetizer.imageName)").resizable().frame(width: 128.84,height: 86).cornerRadius(10)
+                        Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                         
                         VStack(alignment: .leading) {
                             Text(apetizer.name)
