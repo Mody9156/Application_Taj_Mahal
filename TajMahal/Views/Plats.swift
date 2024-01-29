@@ -14,25 +14,30 @@ struct Plats: View {
             ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
                 NavigationLink {
                 
-                    VStack {
-                            Image("\(mainCourse.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(10)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold)
-                                Text(mainCourse.allergens).foregroundColor(.gray)
-                            }.padding()
-                            
-                            VStack (alignment: .leading){
-                                Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold)
-                                    
-                                Text(mainCourse.ingredients).foregroundColor(.gray)
-                            
-                        }
-                    }.navigationTitle(mainCourse.imageName)
+                    ScrollView {
+                        VStack {
+                            Spacer()
+                                Image("\(mainCourse.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(10)
+                                
+                                VStack(alignment: .leading) {
+                                    Spacer()
+                                    Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
+                                    Text(mainCourse.allergens).foregroundColor(.gray)
+                                
+                                    Spacer()
+                                    Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
+                                       
+                                    Text(mainCourse.ingredients).foregroundColor(.gray)
+                                    Spacer()
+                                }.padding()
+                           
+                        }.navigationTitle(mainCourse.imageName)
+                    }
                 } label: {
                     
                     VStack {
                         HStack {
+                            
                             Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
                             
                             VStack(alignment: .leading) {

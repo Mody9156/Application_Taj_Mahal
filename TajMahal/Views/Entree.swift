@@ -14,7 +14,26 @@ struct Entree: View {
             ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
                 
                 NavigationLink {
-                    Image("\(apetizer.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(10)
+                    
+                    ScrollView {
+                        VStack {
+                            Spacer()
+                            Image("\(apetizer.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(10)
+                            
+                            VStack(alignment: .leading) {
+                                Spacer()
+                                Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
+                                Text(apetizer.allergens).foregroundColor(.gray)
+                                
+                                Spacer()
+                                Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
+                                
+                                Text(apetizer.ingredients).foregroundColor(.gray)
+                                Spacer()
+                            }.padding()
+                            
+                        }.navigationTitle(apetizer.imageName)
+                    }
                 } label: {
                     HStack {
                         Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
@@ -32,9 +51,8 @@ struct Entree: View {
                     }
                 }
                 
-            }
-        
-    }
+            }.navigationTitle("")
+        }
+    
     }
 }
-
