@@ -52,19 +52,22 @@ struct Plats: View {
 
 
 struct PlatsLabels : View {
+
     var mainCourse : Dish
     var body: some View {
         VStack {
             HStack{
                 
-                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(24).position(x: 177, y: 179).offset(x: 20, y: 124)
+                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(.top,12).padding(.leading,12).padding(.bottom,12)
                 
                 VStack(alignment: .leading) {
                     Text(mainCourse.name)
-                        .font(.title3)
-                    Text(mainCourse.description).foregroundColor(.gray).padding(.top,18)
+                        
+                    Text(mainCourse.description).font(.caption2).fontWeight(.medium).multilineTextAlignment(.leading)
+                        
                     HStack{
-                        Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€")//format number permet de manipuler l'affichage du nombre
+                        Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€")
+                            //format number permet de manipuler l'affichage du nombre
                         Spacer()
                         Image("\(mainCourse.spiceLevel)")
                     }

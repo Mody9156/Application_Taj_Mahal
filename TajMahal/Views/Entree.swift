@@ -51,11 +51,11 @@ struct Entree: View {
                           
                         }
                         
-                    }.navigationTitle("")
+                    }
                 }
             }
             
-        }
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)// gerer l'apparence
     }
 }
 
@@ -64,14 +64,14 @@ struct Entreelabel : View {
     var body: some View {
         HStack {
             
-            Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+            Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(.top,12).padding(.leading,12).padding(.bottom,12)
             
             VStack(alignment: .leading) {
                 
                 Text(apetizer.name)
-                    .font(.title3).foregroundColor(.gray).fontWeight(.bold)
+                   
                 
-                Text(apetizer.description).foregroundColor(.gray)
+                Text(apetizer.description).font(.caption2).fontWeight(.medium).multilineTextAlignment(.leading)
                 
                 HStack{
                     
@@ -83,6 +83,7 @@ struct Entreelabel : View {
                 }
             }
             Spacer()
-        }
+        }.padding()
+            .frame(width: 335, height: 110).cornerRadius(10).background(.white)
     }
 }
