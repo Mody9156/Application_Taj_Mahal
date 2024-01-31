@@ -43,7 +43,7 @@ struct Plats: View {
                 }
             }
             
-        }
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)// gerer l'apparence
         
            
         }
@@ -69,8 +69,8 @@ struct PlatsLabels : View {
                         Image("\(mainCourse.spiceLevel)").resizable().frame(width: 52, height: 12)
                     }
                 }
-            }.environment(\.layoutDirection, .rightToLeft)
-                .environment(\.defaultMinListRowHeight, 150)
+            }.background(.white).frame(width: 335,height: 110)
+                
         }
     }
 }
