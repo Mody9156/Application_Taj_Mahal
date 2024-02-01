@@ -24,7 +24,16 @@ struct Entree: View {
                                     
                                     Spacer()
                                     
-                                    Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(10)
+                                    ZStack(alignment: .topTrailing) {
+                                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
+                                       
+                                        ZStack(alignment: .topTrailing) {
+                                            Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
+                                            Image("\(apetizer.spiceLevel)").frame(width: 58, height: 14).padding()
+                                        }
+                                            
+                                      
+                                    }
                                     
                                     VStack(alignment: .leading) {
                                         
@@ -47,6 +56,7 @@ struct Entree: View {
                                 }.navigationTitle(apetizer.imageName)
                             }
                         } label: {
+                            
                             Entreelabel(apetizer:apetizer)
                           
                         }

@@ -16,7 +16,7 @@ struct WelcomeView: View {
     var body: some View {
         ScrollView {
             NavigationStack {
-                VStack{
+                LazyVStack{
                     Image("TajMahal").frame(width: 335,height: 423)//picture for the view
                     
                     HStack {
@@ -83,3 +83,5 @@ struct BottomView: View {
         }
     }
 }
+
+

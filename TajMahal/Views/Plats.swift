@@ -13,28 +13,46 @@ struct Plats: View {
         Section(header:Text("Plats Principaux")) {// titre de la setion
             ScrollView {
                 LazyVStack {
-                    ForEach(viewModel.mainCourseArray ,id:\.id){ mainCourse in
+                    
+                    ForEach(viewModel.mainCourseArray ,id:\.id){
+                        
+                        mainCourse in
+                        
                         NavigationLink {
                         
                             ScrollView {
+                                
                                 VStack {
+                                    
                                     Spacer()
+                                    
+                                    ZStack {
                                         Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(10)
+                                        ZStack(alignment: .topTrailing) {
+                                            Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
+                                            Image("\(mainCourse.spiceLevel)").frame(width: 58, height: 14).padding()
+                                        }
+                                    }
                                         
                                         VStack(alignment: .leading) {
                                             Spacer()
                                             Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
+                                            
                                             Text(mainCourse.allergens).foregroundColor(.gray)
                                         
                                             Spacer()
+                                            
                                             Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
                                                
                                             Text(mainCourse.ingredients).foregroundColor(.gray)
+                                            
                                             Spacer()
+                                            
                                         }.padding()
                                   
                                 }
                             }.navigationBarTitle(mainCourse.name)
+                            
                         } label: {
                             
                             PlatsLabels(mainCourse:mainCourse)
