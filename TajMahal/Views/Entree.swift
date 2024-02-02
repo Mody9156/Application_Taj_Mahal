@@ -39,23 +39,23 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
         
         HStack {
             
-            Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10)
+            Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(10)
             
             VStack(alignment: .leading) {
                 
-                Text(apetizer.name).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding()
+                Text(apetizer.name).lineSpacing(10).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding(.bottom,5)
                    
                 
-                Text(apetizer.description).font(.caption2).fontWeight(.medium).multilineTextAlignment(.leading).foregroundColor(.gray).padding()
+                Text(apetizer.description).font(.caption2).fontWeight(.medium).multilineTextAlignment(.leading).foregroundColor(.gray)
                 
                 HStack{
                     
-                    Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray)//format number permet de manipuler l'affichage
+                    Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.system(size: 12, weight: .bold, design: .serif))//format number permet de manipuler l'affichage
                     
                     Spacer()
                     
                     Image("\(apetizer.spiceLevel)").foregroundColor(.gray)
-                }.padding()
+                }
             }
             Spacer()
             
