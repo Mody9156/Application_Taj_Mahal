@@ -21,12 +21,12 @@ struct MenuView: View {
                 List {
                     
                    
-                    Entree().listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//incrémentation des entrées sous forme de liste
+                    Entree()//incrémentation des entrées sous forme de liste
                     
                     Plats()//incrémentation des plats sous forme de liste
                     
                 }
-            }.navigationBarTitle("Menu").listStyle(.plain)
+            }.navigationBarTitle("Menu")
 
         }
     }
