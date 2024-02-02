@@ -19,25 +19,25 @@ struct WelcomeView: View {
             Image("TajMahal").frame(width: 335,height: 423)//picture for the view
             HStack(spacing: 150){
                 
-                VStack (alignment: .leading) {
+                VStack  {
                     
                     Text("Restaurant Indien").foregroundColor(.gray)
                     Text("Taj Mahal").font(.title).fontWeight(.bold)
                 }
                
                 Image("Logo").resizable().renderingMode(.template).foregroundStyle(.gray).frame(width: 40,height: 40)
-            }
+            }.padding()
             
-            VStack(alignment: .center) {
+            VStack (alignment: .leading){
                
-                    BottomView(name: "Mardi", img: "Horaire", moreNews: "11h30 - 14h30 · 18h30 - 22h00")
-                    BottomView(name: "Type de Service", img: "Service", moreNews: "a emporter")
-                    BottomView(name: "12 Avenue de la Brique - 75010 Paris ", img: "Localisation", moreNews: "")
-                    BottomView(name: "www.tajmahal.fr", img: "Site", moreNews: "")
-                    BottomView(name: "06 12 34 56 78", img: "Téléphone", moreNews: "")
+                    BottomView(name: "Mardi", img: "Horaire", moreNews: "11h30-14h30·18h30-22h00")// éléments de la struct BottomView  ⇣
+                    BottomView(name: "Type de Service", img: "Service", moreNews: "a emporter")// éléments de la struct BottomView  ⇣
+                    BottomView(name: "12 Avenue de la Brique - 75010 Paris ", img: "Localisation", moreNews: "")// éléments de la struct BottomView  ⇣
+                    BottomView(name: "www.tajmahal.fr", img: "Site", moreNews: "")// éléments de la struct BottomView  ⇣
+                    BottomView(name: "06 12 34 56 78", img: "Téléphone", moreNews: "")// éléments de la struct BottomView  ⇣
                
                
-            }
+            }.padding()
             
             NavigationLink {
                 MenuView()
@@ -57,13 +57,13 @@ struct WelcomeView: View {
 
 struct BottomView: View {
 
-    var name:String
-    var img:String
-    var moreNews:String
+    var name:String //@State de la variable dans la struct WelcomeView ⇡
+    var img:String //@State de la variable dans la struct WelcomeView ⇡
+    var moreNews:String //@State de la variable dans la struct WelcomeView ⇡
 
     var body: some View {
 
-            HStack(spacing : name == "Mardi" ?  20 : 100 ){
+        HStack(spacing : Spacing(for : name )){ // utilisation de la  function Spacing ⇣
 
 
                 Label(name, image: img).foregroundColor(.gray)
@@ -73,4 +73,17 @@ struct BottomView: View {
 
         }
     }
+}
+
+private func Spacing(for name : String) -> CGFloat { // CGFloat pour type float
+    switch name {
+    case "Mardi" :
+        return 50
+    case "Type de Service":
+        return 100
+    default :
+        return 0;
+        
+    }
+   
 }
