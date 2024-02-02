@@ -18,45 +18,8 @@ struct Plats: View {
                         
                         mainCourse in
                         
-                        NavigationLink {
-                        
-                            ScrollView {
-                                
-                                VStack {
-                                    
-                                    Spacer()
-                                    
-                                    ZStack {
-                                        Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(10)
-                                        ZStack(alignment: .topTrailing) {
-                                            Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
-                                            Image("\(mainCourse.spiceLevel)").padding()
-                                        }
-                                    }
-                                        
-                                        VStack(alignment: .leading) {
-                                            Spacer()
-                                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
-                                            
-                                            Text(mainCourse.allergens).foregroundColor(.gray)
-                                        
-                                            Spacer()
-                                            
-                                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
-                                               
-                                            Text(mainCourse.ingredients).foregroundColor(.gray)
-                                            
-                                            Spacer()
-                                            
-                                        }.padding()
-                                  
-                                }
-                            }.navigationBarTitle(mainCourse.name)
-                            
-                        } label: {
-                            
-                            PlatsLabels(mainCourse:mainCourse)
-                        }
+                        plats(mainCourse:mainCourse)
+                       
                     }
                 }
             }
@@ -97,4 +60,49 @@ struct PlatsLabels : View {
                 
         }
   
+}
+
+extension Plats {
+    
+    func plats(mainCourse : Dish) ->some View {
+        NavigationLink {
+        
+            ScrollView {
+                
+                VStack {
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(10)
+                        ZStack(alignment: .topTrailing) {
+                            Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
+                            Image("\(mainCourse.spiceLevel)").padding()
+                        }
+                    }
+                        
+                        VStack(alignment: .leading) {
+                            Spacer()
+                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
+                            
+                            Text(mainCourse.allergens).foregroundColor(.gray)
+                        
+                            Spacer()
+                            
+                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
+                               
+                            Text(mainCourse.ingredients).foregroundColor(.gray)
+                            
+                            Spacer()
+                            
+                        }.padding()
+                  
+                }
+            }.navigationBarTitle(mainCourse.name)
+            
+        } label: {
+            
+            PlatsLabels(mainCourse:mainCourse)
+        }
+    }
 }

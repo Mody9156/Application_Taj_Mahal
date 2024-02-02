@@ -27,7 +27,7 @@ struct Entree: View {
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom).cornerRadius(10) //gerer l'affichage de la list
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list
     }
 }
 
@@ -44,9 +44,9 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
             VStack(alignment: .leading) {
                 
                 Text(apetizer.name).lineSpacing(10).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding(.bottom,5)
-                   
+            
                 
-                Text(apetizer.description).font(.caption2).fontWeight(.medium).multilineTextAlignment(.leading).foregroundColor(.gray)
+                Text(apetizer.description).font(.caption2).fontWeight(.medium).foregroundColor(.gray).multilineTextAlignment(.leading)
                 
                 HStack{
                     
@@ -59,7 +59,7 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
             }
             Spacer()
             
-        }.padding().background(.white)
+        }.frame(width: 335,height: 110).background(.white).cornerRadius(10)
     }
 }
 
