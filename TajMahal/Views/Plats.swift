@@ -24,7 +24,7 @@ struct Plats: View {
                 }
             }
             
-        }
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list
         
            
         }
@@ -37,26 +37,29 @@ struct PlatsLabels : View {
     var mainCourse : Dish
     var body: some View {
      
-        VStack {
+        
             HStack{
                     
-                    Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(.top,12).padding(.leading,12).padding(.bottom,12)
+                    Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(10)
+                
                     
                     VStack(alignment: .leading) {
-                        Text(mainCourse.name)
+                        Text(mainCourse.name).lineSpacing(10).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding(.bottom,5)
                             
-                        Text(mainCourse.description).font(.custom("Plus Jakarta Sans",size: 12)).font(.caption2).multilineTextAlignment(.leading)
+                        Text(mainCourse.description).font(.caption2).fontWeight(.medium).foregroundColor(.gray).multilineTextAlignment(.leading)
                             
                         HStack{
-                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€").font(.custom("Plus Jakarta Sans",size: 12))
-                                //format number permet de manipuler l'affichage du nombre
+                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.system(size: 12, weight: .bold, design: .serif))//format number permet de manipuler l'affichage
                             Spacer()
-                            Image("\(mainCourse.spiceLevel)").padding(.trailing,10).font(.system(size: 12))
+                            
+                            Image("\(mainCourse.spiceLevel)").foregroundColor(.gray)
                             
                         }
                     }
-            }.padding().frame(width: 335, height: 100).background(.white)
-        }.cornerRadius(10)
+          
+            Spacer()
+            
+        }.frame(width: 335,height: 110).background(.white).cornerRadius(10)
                 
         }
   
