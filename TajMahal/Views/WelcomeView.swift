@@ -31,7 +31,7 @@ struct WelcomeView: View {
             VStack (alignment: .leading){
                
                     BottomView(name: "Mardi", img: "Horaire", moreNews: "11h30-14h30·18h30-22h00")// éléments de la struct BottomView  ⇣
-                    BottomView(name: "Type de Service", img: "Service", moreNews: "a emporter")// éléments de la struct BottomView  ⇣
+                    BottomView(name: "Type de Service", img: "Service", moreNews: "À emporter")// éléments de la struct BottomView  ⇣
                     BottomView(name: "12 Avenue de la Brique - 75010 Paris ", img: "Localisation", moreNews: "")// éléments de la struct BottomView  ⇣
                     BottomView(name: "www.tajmahal.fr", img: "Site", moreNews: "")// éléments de la struct BottomView  ⇣
                     BottomView(name: "06 12 34 56 78", img: "Téléphone", moreNews: "")// éléments de la struct BottomView  ⇣
