@@ -71,17 +71,16 @@ extension  Entree {
             VStack {
                 
                
-                ZStack {
+                ZStack (alignment: .topTrailing){
                     
                     Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
                     
-                    ZStack(alignment: .topTrailing) {
+                    ZStack (alignment: .center){
                         
-                        Rectangle().fill(Color.white).frame(width: 89, height: 42).cornerRadius(10)
+                        Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
                         
-                        Image("\(apetizer.spiceLevel)").resizable().frame(width: 74, height: 22)
-                    }
-                    
+                        Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
+                    }.padding(10)
                 }
                 
                 VStack {
@@ -102,6 +101,8 @@ extension  Entree {
                 }
                 
             }.navigationTitle(apetizer.imageName)
+            
+            
         
     } label: {
         
