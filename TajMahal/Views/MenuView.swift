@@ -16,17 +16,17 @@ struct MenuView: View {
         
         NavigationStack {
             
-            VStack(alignment: .center) {
+            VStack {
                 
                 List {
                     
                    
-                    Entree()//incrémentation des entrées sous fourme de liste
+                    Entree().listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//incrémentation des entrées sous forme de liste
                     
-                    Plats()//incrémentation des plats sous fourme de liste
+                    Plats()//incrémentation des plats sous forme de liste
                     
                 }
-            }.navigationBarTitle("Menus")
+            }.navigationBarTitle("Menu").listStyle(.plain)
 
         }
     }

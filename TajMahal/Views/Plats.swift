@@ -61,7 +61,7 @@ struct Plats: View {
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)// gerer l'apparence
+        }
         
            
         }
