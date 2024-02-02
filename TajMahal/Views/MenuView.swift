@@ -33,15 +33,3 @@ struct MenuView: View {
         
 
 }
-
-struct MenuView_Preview : PreviewProvider{
-    
-    static var previews :  some View {
-       
-            MenuView()
-    
-    }
-}
-//#Preview{
-//    MenuView()
-//}
