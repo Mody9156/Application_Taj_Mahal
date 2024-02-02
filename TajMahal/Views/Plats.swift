@@ -106,6 +106,6 @@ extension Plats {
         } label: {
             
             PlatsLabels(mainCourse:mainCourse)
-        }
+        }.navigationBarTitle("")
     }
 }

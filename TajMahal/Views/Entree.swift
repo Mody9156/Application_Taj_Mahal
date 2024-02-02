@@ -68,46 +68,41 @@ extension  Entree {
         func Entrelink(apetizer : Dish) -> some View { // func à la place de "var EntreLink : some View", pour éviter les erreurs
     NavigationLink {
         
-        ScrollView {
-            
             VStack {
                 
-                Spacer()
-                
-                ZStack(alignment: .topTrailing) {
+               
+                ZStack {
                     
                     Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
                     
                     ZStack(alignment: .topTrailing) {
                         
-                        Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
+                        Rectangle().fill(Color.white).frame(width: 89, height: 42).cornerRadius(10)
                         
-                        Image("\(apetizer.spiceLevel)").frame(width: 58, height: 14).padding()
+                        Image("\(apetizer.spiceLevel)").resizable().frame(width: 74, height: 22)
                     }
-                    
                     
                 }
                 
-                VStack(alignment: .leading) {
+                VStack {
                     
-                    Spacer()
                     
-                    Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
+                    Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold)
                     
                     Text(apetizer.allergens).foregroundColor(.gray)
                     
-                    Spacer()
+                 
                     
                     Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
                     
                     Text(apetizer.ingredients).foregroundColor(.gray)
                     
-                    Spacer()
+                
                     
-                }.padding()
+                }
                 
             }.navigationTitle(apetizer.imageName)
-        }
+        
     } label: {
         
         Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
