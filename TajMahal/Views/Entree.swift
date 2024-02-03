@@ -67,7 +67,7 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
 
 extension  Entree {
         func Entrelink(apetizer : Dish) -> some View { // func à la place de "var EntreLink : some View", pour éviter les erreurs
-            VStack {
+            
                 NavigationLink {
             
                     ZStack (alignment: .topTrailing){
@@ -107,9 +107,9 @@ extension  Entree {
             
             Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
             
-                }
+                }.navigationTitle("")
         
             }
-    }
+    
 }
 

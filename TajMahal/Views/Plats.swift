@@ -69,43 +69,45 @@ extension Plats {
     
     func plats(mainCourse : Dish) ->some View {
         NavigationLink {
-        
-            ScrollView {
+    
+            ZStack (alignment: .topTrailing){
                 
-                VStack {
+                Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
+                
+                ZStack (alignment: .center){
                     
-                    Spacer()
+                    Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
                     
-                    ZStack {
-                        Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(10)
-                        ZStack(alignment: .topTrailing) {
-                            Rectangle().fill(Color.white).cornerRadius(10).frame(width: 74, height: 22).padding()
-                            Image("\(mainCourse.spiceLevel)").padding()
-                        }
-                    }
-                        
-                        VStack(alignment: .leading) {
-                            Spacer()
-                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding()
-                            
-                            Text(mainCourse.allergens).foregroundColor(.gray)
-                        
-                            Spacer()
-                            
-                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
-                               
-                            Text(mainCourse.ingredients).foregroundColor(.gray)
-                            
-                            Spacer()
-                            
-                        }.padding()
-                  
+                    Image("\(mainCourse.spiceLevel)").frame(width: 64, height: 12)
+                }.padding(10)
+            }
+            
+            VStack (alignment: .leading) {
+              
+
+                VStack(alignment: .leading)  {
+                    Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
+                    Text(mainCourse.allergens).foregroundColor(.gray).multilineTextAlignment(.leading)
                 }
-            }.navigationBarTitle(mainCourse.name)
-            
+               
+                Divider().frame(width: 335,height: 2)
+             
+                VStack (alignment: .leading) {
+                    Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
+                    
+                    Text(mainCourse.ingredients).font(.subheadline).foregroundColor(.gray).multilineTextAlignment(.leading)
+                }
+               
+
+                
+            }.padding(.leading,40)
+                .navigationBarTitle(Text(mainCourse.name).foregroundColor(.black))
+                            
         } label: {
-            
-            PlatsLabels(mainCourse:mainCourse)
-        }.navigationBarTitle("")
+    
+            Entreelabel(apetizer:mainCourse) // strcut  PlatsLabels ⇡
+    
+        }.navigationTitle("")
+
     }
 }
