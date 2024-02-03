@@ -67,49 +67,49 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
 
 extension  Entree {
         func Entrelink(apetizer : Dish) -> some View { // func à la place de "var EntreLink : some View", pour éviter les erreurs
-    NavigationLink {
-        
-            VStack (alignment: .leading,spacing: 10){
-                
-               
-                ZStack (alignment: .topTrailing){
-                    
-                    Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
-                    
-                    ZStack (alignment: .center){
+            VStack {
+                NavigationLink {
+            
+                    ZStack (alignment: .topTrailing){
                         
-                        Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
+                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
                         
-                        Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
-                    }.padding(10)
-                }
-                
-                VStack(spacing: 10) {
-                    
-                    VStack(alignment: .leading)  {
-                        Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding(5)
-                        Text(apetizer.allergens).foregroundColor(.gray)
+                        ZStack (alignment: .center){
+                            
+                            Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
+                            
+                            Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
+                        }.padding(10)
                     }
-                   
-                    Divider()
-                 
+                    
                     VStack (alignment: .leading) {
-                        Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding(5)
+                      
+
+                        VStack(alignment: .leading)  {
+                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
+                            Text(apetizer.allergens).foregroundColor(.gray).multilineTextAlignment(.leading)
+                        }
+                       
+                        Divider().frame(width: 335,height: 2)
+                     
+                        VStack (alignment: .leading) {
+                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
+                            
+                            Text(apetizer.ingredients).font(.subheadline).foregroundColor(.gray).multilineTextAlignment(.leading)
+                        }
+                       
+
                         
-                        Text(apetizer.ingredients).foregroundColor(.gray)
-                    }
-                
-                    
+                    }.padding(.leading,40)
+                        .navigationBarTitle(Text(apetizer.name).foregroundColor(.black))
+                                    
+                } label: {
+            
+            Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
+            
                 }
-                
-            }.navigationTitle(apetizer.imageName)
-            
-            
         
-    } label: {
-        
-        Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
-    }
+            }
     }
 }
 
