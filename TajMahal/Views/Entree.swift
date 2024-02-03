@@ -57,6 +57,7 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
                     Image("\(apetizer.spiceLevel)").foregroundColor(.gray)
                 }
             }
+            
             Spacer()
             
         }.frame(width: 335,height: 110).background(.white).cornerRadius(10)
@@ -68,7 +69,7 @@ extension  Entree {
         func Entrelink(apetizer : Dish) -> some View { // func à la place de "var EntreLink : some View", pour éviter les erreurs
     NavigationLink {
         
-            VStack {
+            VStack (alignment: .leading,spacing: 10){
                 
                
                 ZStack (alignment: .topTrailing){
@@ -83,19 +84,20 @@ extension  Entree {
                     }.padding(10)
                 }
                 
-                VStack {
+                VStack(spacing: 10) {
                     
-                    
-                    Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold)
-                    
-                    Text(apetizer.allergens).foregroundColor(.gray)
-                    
+                    VStack(alignment: .leading)  {
+                        Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).padding(5)
+                        Text(apetizer.allergens).foregroundColor(.gray)
+                    }
+                   
+                    Divider()
                  
-                    
-                    Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding()
-                    
-                    Text(apetizer.ingredients).foregroundColor(.gray)
-                    
+                    VStack (alignment: .leading) {
+                        Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).padding(5)
+                        
+                        Text(apetizer.ingredients).foregroundColor(.gray)
+                    }
                 
                     
                 }
