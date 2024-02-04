@@ -83,7 +83,15 @@ private func Spacing(for name : String) -> CGFloat { // CGFloat pour type float
         return 100
     default :
         return 0;
-        
+        // méthode  switch pour une réutilisation
     }
    
+}//function de la struct BottomView ⇡
+
+
+
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
 }
