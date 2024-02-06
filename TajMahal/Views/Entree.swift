@@ -10,10 +10,11 @@ import SwiftUI
 struct Entree: View {
     
     let viewModel: ViewModel = ViewModel()
+    let Titlesection = Text("Entrées").font(.custom("PlusJakartaSans-700.ttf",size:14))
     
     var body: some View {
         
-        Section("Entrées") {// titre de la setion
+        Section("\(Titlesection)") {// titre de la setion
             
             ScrollView {
                 
@@ -43,14 +44,14 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
             
             VStack(alignment: .leading) {
                 
-                Text(apetizer.name).lineSpacing(10).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding(.bottom,5)
+                Text(apetizer.name).lineSpacing(10).font(.system(size: 12, weight: .bold, design: .serif)).font(.custom("PlusJakartaSans-400.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).padding(.bottom,5)
             
                 
-                Text(apetizer.description).font(.caption2).fontWeight(.medium).foregroundColor(.gray).multilineTextAlignment(.leading)
+                Text(apetizer.description).font(.caption2).fontWeight(.medium).font(.custom("PlusJakartaSans-400.ttf", size: 15)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).multilineTextAlignment(.leading)
                 
                 HStack{
                     
-                    Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.system(size: 12, weight: .bold, design: .serif))//format number permet de manipuler l'affichage
+                    Text("\(apetizer.price,format:.number.precision(.fractionLength(2)))€").font(.custom("PlusJakartaSans-600.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).bold()//format number permet de manipuler l'affichage
                     
                     Spacer()
                     
@@ -72,7 +73,7 @@ extension  Entree {
             
                     ZStack (alignment: .topTrailing){
                         
-                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
+                        Image("\(apetizer.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(11)
                         
                         ZStack (alignment: .center){
                             
@@ -100,8 +101,7 @@ extension  Entree {
                        
 
                         
-                    }.padding(.leading,40)
-                        .navigationBarTitle(Text(apetizer.name).foregroundColor(.black))
+                    }.padding(.leading,40).navigationBarTitle(apetizer.name)
                                     
                 } label: {
             

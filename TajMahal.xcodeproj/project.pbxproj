@@ -10,6 +10,7 @@
 		238B1F132B67CFC100050AC7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B1F122B67CFC100050AC7 /* MenuView.swift */; };
 		238B1F152B67D08B00050AC7 /* Entree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B1F142B67D08B00050AC7 /* Entree.swift */; };
 		238B1F172B67D0B000050AC7 /* Plats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B1F162B67D0AF00050AC7 /* Plats.swift */; };
+		23DD31242B722CC200204383 /* PlusJakartaSans-wgt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DD31222B722CC200204383 /* PlusJakartaSans-wgt.ttf */; };
 		428D2B512AFA851900BBA4F5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B502AFA851900BBA4F5 /* Model.swift */; };
 		428D2B532AFA882700BBA4F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B522AFA882700BBA4F5 /* ViewModel.swift */; };
 		42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */; };
@@ -22,6 +23,10 @@
 		238B1F122B67CFC100050AC7 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		238B1F142B67D08B00050AC7 /* Entree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entree.swift; sourceTree = "<group>"; };
 		238B1F162B67D0AF00050AC7 /* Plats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plats.swift; path = TajMahal/Views/Plats.swift; sourceTree = SOURCE_ROOT; };
+		23DD31222B722CC200204383 /* PlusJakartaSans-wgt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-wgt.ttf"; sourceTree = "<group>"; };
+		23DD31262B722F5300204383 /* PlusJakartaSans-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-400.ttf"; sourceTree = "<group>"; };
+		23DD31272B722FF700204383 /* PlusJakartaSans-600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-600.ttf"; sourceTree = "<group>"; };
+		23DD31282B7256F000204383 /* PlusJakartaSans-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-700.ttf"; sourceTree = "<group>"; };
 		428D2B502AFA851900BBA4F5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		428D2B522AFA882700BBA4F5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		42E9DCAA2AF11136007CE7D0 /* TajMahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TajMahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +64,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		23DD31252B722DED00204383 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				23DD31282B7256F000204383 /* PlusJakartaSans-700.ttf */,
+				23DD31262B722F5300204383 /* PlusJakartaSans-400.ttf */,
+				23DD31272B722FF700204383 /* PlusJakartaSans-600.ttf */,
+				23DD31222B722CC200204383 /* PlusJakartaSans-wgt.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		42E9DCA12AF11136007CE7D0 = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +96,8 @@
 			children = (
 				23D7174C2B65324E0027701A /* Model */,
 				42E9DCC02AF11662007CE7D0 /* Info.plist */,
-				23D7174B2B6531080027701A /* ViewModel */,
 				42E9DCBB2AF113D1007CE7D0 /* Views */,
+				23D7174B2B6531080027701A /* ViewModel */,
 				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
 				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
 				42E9DCB32AF11138007CE7D0 /* Preview Content */,
@@ -92,6 +108,7 @@
 		42E9DCB32AF11138007CE7D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				23DD31252B722DED00204383 /* Font */,
 				42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -166,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DD31242B722CC200204383 /* PlusJakartaSans-wgt.ttf in Resources */,
 				42E9DCB52AF11138007CE7D0 /* Preview Assets.xcassets in Resources */,
 				42E9DCB22AF11138007CE7D0 /* Assets.xcassets in Resources */,
 			);

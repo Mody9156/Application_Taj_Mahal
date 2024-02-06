@@ -9,22 +9,21 @@ import SwiftUI
 
 struct Plats: View {
     let viewModel: ViewModel = ViewModel()
+    let Titlesection = Text("Plats Principaux").font(.custom("PlusJakartaSans-700.ttf",size:14))
     var body: some View {
-        Section(header:Text("Plats Principaux")) {// titre de la setion
+        Section("\(Titlesection)") {// titre de la section "plats"
             ScrollView {
                 LazyVStack {
                     
-                    ForEach(viewModel.mainCourseArray ,id:\.id){
+                    ForEach(viewModel.mainCourseArray ,id:\.id){  mainCourse in
                         
-                        mainCourse in
-                        
-                        plats(mainCourse:mainCourse)
+                        plats(mainCourse:mainCourse)//fonction de la struct plats ⇣
                        
                     }
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list ainsi que les espaces
         
            
         }
@@ -32,7 +31,7 @@ struct Plats: View {
 
 
 
-struct PlatsLabels : View {
+struct PlatsLabels : View {//éléments affichées
 
     var mainCourse : Dish
     var body: some View {
@@ -40,16 +39,17 @@ struct PlatsLabels : View {
         
             HStack{
                     
-                    Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(10)
+                Image("\(mainCourse.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(10)
                 
                     
                     VStack(alignment: .leading) {
-                        Text(mainCourse.name).lineSpacing(10).font(.system(size: 14, weight: .bold, design: .serif)).foregroundColor(.gray).padding(.bottom,5)
+                        Text(mainCourse.name).lineSpacing(10).font(.system(size: 12, weight: .bold, design: .serif)).font(.custom("PlusJakartaSans-400.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).padding(.bottom,5)
                             
-                        Text(mainCourse.description).font(.caption2).fontWeight(.medium).foregroundColor(.gray).multilineTextAlignment(.leading)
+                        Text(mainCourse.description).font(.caption2).fontWeight(.medium).font(.custom("PlusJakartaSans-400.ttf", size: 15)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).multilineTextAlignment(.leading)
+                        
                             
                         HStack{
-                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.system(size: 12, weight: .bold, design: .serif))//format number permet de manipuler l'affichage
+                            Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.custom("PlusJakartaSans-600.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).bold()//format number permet de manipuler l'affichage
                             Spacer()
                             
                             Image("\(mainCourse.spiceLevel)").foregroundColor(.gray)
@@ -65,14 +65,14 @@ struct PlatsLabels : View {
   
 }
 
-extension Plats {
+extension Plats { // extraction (suite de la struct PlatsLabels)
     
-    func plats(mainCourse : Dish) ->some View {
-        NavigationLink {
+    func plats(mainCourse : Dish) ->some View { // contenue
+        NavigationLink {//destination
     
             ZStack (alignment: .topTrailing){
                 
-                Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode: .fill).frame(width: 335,height: 467).cornerRadius(11)
+                Image("\(mainCourse.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(11)
                 
                 ZStack (alignment: .center){
                     
@@ -100,14 +100,13 @@ extension Plats {
                
 
                 
-            }.padding(.leading,40)
-                .navigationBarTitle(Text(mainCourse.name).foregroundColor(.black))
+            }.padding(.leading,40).navigationBarTitle(mainCourse.name)
                             
         } label: {
     
-            Entreelabel(apetizer:mainCourse) // strcut  PlatsLabels ⇡
+            PlatsLabels(mainCourse:mainCourse) // struct  PlatsLabels ⇡
     
-        }.navigationTitle("")
+        }.navigationTitle("Menus")
 
     }
 }
