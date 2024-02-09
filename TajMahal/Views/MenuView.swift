@@ -25,7 +25,7 @@ struct MenuView: View {
                         Entree()//incrémentation des entrées sous forme de liste
                         
                         Plats()//incrémentation des plats sous forme de liste
-                                    }.navigationTitle("Menu").navigationBarTitleDisplayMode(.inline)
+                }.navigationTitle("Menu").navigationBarTitleDisplayMode(.inline)
             }
 
         }

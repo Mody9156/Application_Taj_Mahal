@@ -74,7 +74,7 @@ extension  Entree {
             
                     ZStack (alignment: .topTrailing){
                         
-                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 368,height: 560.62).cornerRadius(11)
+                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 368,height: 567).cornerRadius(11)
                         
                         ZStack (alignment: .center){
                             
@@ -83,7 +83,7 @@ extension  Entree {
                             Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
                             
                         }.padding(10)
-                    }
+                    }.padding(.leading,19).padding(.trailing,19)
                     
                     VStack (alignment: .leading) {
                       
@@ -104,13 +104,13 @@ extension  Entree {
                        
 
                         
-                    }.navigationTitle(mainCourse.name).padding(.leading,20).padding(.trailing,20)
+                    }
                                     
                 } label: {
             
             Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
             
-                }
+                }.navigationBarTitle(Text(""),displayMode: .automatic).navigationBarHidden(true)
         
             }
     
