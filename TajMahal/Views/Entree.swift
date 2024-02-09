@@ -11,6 +11,7 @@ struct Entree: View {
     
     let viewModel: ViewModel = ViewModel()
     let Titlesection = Text("Entrées").font(.custom("PlusJakartaSans-700.ttf",size:14))
+//    let ChangeBole : MenuView
     
     var body: some View {
         
@@ -83,7 +84,7 @@ extension  Entree {
                             Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
                             
                         }.padding(10)
-                    }.padding(.leading,19).padding(.trailing,19)
+                    }
                     
                     VStack (alignment: .leading) {
                       
@@ -104,15 +105,20 @@ extension  Entree {
                        
 
                         
-                    }
+                    }.navigationBarTitleDisplayMode(.inline).toolbar{
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Text(apetizer.name).font(.title2.bold()).accessibilityAddTraits(.isHeader)
+                        }
+                    }.padding(.leading,20).padding(.trailing,20)
+
                                     
                 } label: {
             
             Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
             
-                }.navigationBarTitle(Text(""),displayMode: .automatic).navigationBarHidden(true)
-        
-            }
+                }.navigationTitle("")
+            
+        }
     
 }
 

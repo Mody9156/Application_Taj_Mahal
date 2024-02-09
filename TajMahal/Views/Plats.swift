@@ -89,7 +89,7 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
                         
                     }.padding(10)
                 }
-            }.padding(.leading,19).padding(.trailing,19)
+            }
           
             
             VStack (alignment: .leading) {
@@ -113,8 +113,11 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
                
 
                 
-            }.navigationTitle(mainCourse.name).padding(.leading,20).padding(.trailing,20)
-                            
+            }.navigationBarTitleDisplayMode(.inline).toolbar{
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text(mainCourse.name).font(.title2.bold()).accessibilityAddTraits(.isHeader)
+                }
+            }.padding(.leading,20).padding(.trailing,20)
         } label: {
             
             PlatsLabels(mainCourse:mainCourse) // struct  PlatsLabels ⇡

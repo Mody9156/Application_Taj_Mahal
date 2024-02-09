@@ -11,7 +11,7 @@ import SwiftUI
 struct MenuView: View {
     // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
     let viewModel: ViewModel = ViewModel()
-    
+    let ChangeBol : Bool = false
     var body: some View {
         
         NavigationStack {
@@ -20,12 +20,16 @@ struct MenuView: View {
                 
                 List {
                     
-              
-                        
-                        Entree()//incrémentation des entrées sous forme de liste
-                        
-                        Plats()//incrémentation des plats sous forme de liste
-                }.navigationTitle("Menu").navigationBarTitleDisplayMode(.inline)
+                    
+                    
+                    Entree()//incrémentation des entrées sous forme de liste
+                    
+                    Plats()//incrémentation des plats sous forme de liste
+                }.navigationBarTitleDisplayMode(.inline).toolbar{
+                    ToolbarItem(placement: .principal) {
+                        Text("Menu").font(.title2.bold()).accessibilityAddTraits(.isHeader)
+                    }
+                }
             }
 
         }
