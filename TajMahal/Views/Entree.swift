@@ -107,7 +107,7 @@ extension  Entree {
             
             Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
             
-                }.navigationTitle("")
+                }
         
             }
     

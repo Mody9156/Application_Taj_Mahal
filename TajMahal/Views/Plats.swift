@@ -14,7 +14,7 @@ struct Plats: View {
         Section("\(Titlesection)") {// titre de la section "plats"
             ScrollView {
                 LazyVStack {
-                    
+                  
                     ForEach(viewModel.mainCourseArray ,id:\.id){  mainCourse in
                         
                         plats(mainCourse:mainCourse)//fonction de la struct plats ⇣
@@ -59,7 +59,7 @@ struct PlatsLabels : View {//éléments affichées
           
             Spacer()
             
-        }.frame(width: 335,height: 110).background(.white).cornerRadius(10)
+            }.frame(width: 335,height: 110).background(.white).cornerRadius(10)
                 
         }
   
@@ -106,7 +106,7 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
     
             PlatsLabels(mainCourse:mainCourse) // struct  PlatsLabels ⇡
     
-        }.navigationTitle("Menus")
+        }
 
     }
 }
