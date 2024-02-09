@@ -22,7 +22,7 @@ struct Plats: View {
                             
                             plats(mainCourse:mainCourse)//fonction de la struct plats ⇣
                             
-                                    }
+                                    }.padding(5)
                                 }
                             }
                     
@@ -47,6 +47,7 @@ struct PlatsLabels : View {//éléments affichées
                 
                     
                     VStack(alignment: .leading) {
+                        
                         Text(mainCourse.name).lineSpacing(10).font(.system(size: 12, weight: .bold, design: .serif)).font(.custom("PlusJakartaSans-400.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).padding(.bottom,5)
                             
                         Text(mainCourse.description).font(.caption2).fontWeight(.medium).font(.custom("PlusJakartaSans-400.ttf", size: 15)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).multilineTextAlignment(.leading)
@@ -54,6 +55,7 @@ struct PlatsLabels : View {//éléments affichées
                             
                         HStack{
                             Text("\(mainCourse.price,format:.number.precision(.fractionLength(2)))€").foregroundColor(.gray).font(.custom("PlusJakartaSans-600.ttf", size: 12)).foregroundColor(Color(red: 154/255, green: 154/255, blue: 154/255, opacity: 1.0)).bold()//format number permet de manipuler l'affichage
+                            
                             Spacer()
                             
                             Image("\(mainCourse.spiceLevel)").foregroundColor(.gray)
@@ -84,6 +86,7 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
                         Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
                         
                         Image("\(mainCourse.spiceLevel)").frame(width: 64, height: 12)
+                        
                     }.padding(10)
                 }
             }.padding(.leading,19).padding(.trailing,19)
@@ -93,6 +96,7 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
               
 
                 VStack(alignment: .leading)  {
+                    
                     Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5).font(.system(size: 14))
 
                     Text(mainCourse.allergens).foregroundColor(.gray).multilineTextAlignment(.leading).font(.system(size: 12))

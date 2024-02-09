@@ -16,19 +16,20 @@ struct Entree: View {
         
         Section("\(Titlesection)") {// titre de la setion
             
-          
+            ScrollView {
+                LazyVStack{
                     
                     ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
-                        ScrollView {
-                            
-                          
+                        
+                        
+                        
                         Entrelink(apetizer:apetizer)// Les éléments supplémentaires de l'entrée selectionnée ⇣
-                      
+                    }.padding(5)
                  
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom).padding(.leading,20).padding(.trailing,20)//gerer l'affichage de la list
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list
     }
 }
 
@@ -73,13 +74,14 @@ extension  Entree {
             
                     ZStack (alignment: .topTrailing){
                         
-                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 335,height: 467).cornerRadius(11)
+                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 368,height: 560.62).cornerRadius(11)
                         
                         ZStack (alignment: .center){
                             
                             Rectangle().fill(Color.white).frame(width: 74, height: 22).cornerRadius(10)
                             
                             Image("\(apetizer.spiceLevel)").frame(width: 64, height: 12)
+                            
                         }.padding(10)
                     }
                     
@@ -87,21 +89,22 @@ extension  Entree {
                       
 
                         VStack(alignment: .leading)  {
-                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
-                            Text(apetizer.allergens).foregroundColor(.gray).multilineTextAlignment(.leading)
+                            Text("Allergènes:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5).font(.system(size: 14))
+                            
+                            Text(apetizer.allergens).foregroundColor(.gray).multilineTextAlignment(.leading).font(.system(size: 12))
                         }
                        
-                        Divider().frame(width: 335,height: 2)
-                     
+                        Divider().frame(width: 368,height: 2)//Ligne de séparation
+
                         VStack (alignment: .leading) {
-                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5)
+                            Text("Ingredients:").foregroundColor(.gray).fontWeight(.bold).multilineTextAlignment(.leading).padding(5).font(.system(size: 14))
                             
-                            Text(apetizer.ingredients).font(.subheadline).foregroundColor(.gray).multilineTextAlignment(.leading)
+                            Text(apetizer.ingredients).font(.subheadline).foregroundColor(.gray).multilineTextAlignment(.leading).font(.system(size: 12))
                         }
                        
 
                         
-                    }.padding(.leading,40).navigationBarTitle(apetizer.name)
+                    }.navigationTitle(mainCourse.name).padding(.leading,20).padding(.trailing,20)
                                     
                 } label: {
             
