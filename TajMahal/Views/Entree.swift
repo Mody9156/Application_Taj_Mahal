@@ -16,19 +16,19 @@ struct Entree: View {
         
         Section("\(Titlesection)") {// titre de la setion
             
-            ScrollView {
-                
-                LazyVStack {
+          
                     
                     ForEach(viewModel.apetizerArray ,id:\.id){ apetizer in
-                        
+                        ScrollView {
+                            
+                          
                         Entrelink(apetizer:apetizer)// Les éléments supplémentaires de l'entrée selectionnée ⇣
                       
-                    }
+                 
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom).padding(.leading,20).padding(.trailing,20)//gerer l'affichage de la list
     }
 }
 
@@ -40,7 +40,7 @@ struct Entreelabel : View { // éléments de la liste des entrées affichées
         
         HStack {
             
-            Image("\(apetizer.imageName)").resizable().frame(width: 112,height: 86).cornerRadius(10).padding(10)
+            Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 112,height: 86).cornerRadius(10).padding(10)
             
             VStack(alignment: .leading) {
                 
@@ -73,7 +73,7 @@ extension  Entree {
             
                     ZStack (alignment: .topTrailing){
                         
-                        Image("\(apetizer.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(11)
+                        Image("\(apetizer.imageName)").resizable().aspectRatio(contentMode:.fill).frame(width: 335,height: 467).cornerRadius(11)
                         
                         ZStack (alignment: .center){
                             
