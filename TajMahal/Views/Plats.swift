@@ -10,6 +10,7 @@ import SwiftUI
 struct Plats: View {
     let viewModel: ViewModel = ViewModel()
     let Titlesection = Text("Plats Principaux").font(.custom("PlusJakartaSans-700.ttf",size:14))
+  
     var body: some View {
         Section("\(Titlesection)") {// titre de la section "plats"
             ScrollView {
@@ -23,11 +24,13 @@ struct Plats: View {
                 }
             }
             
-        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)//gerer l'affichage de la list ainsi que les espaces
+        }.listStyle(.plain).listRowBackground(Color.clear).listSectionSeparator(.hidden, edges: .bottom)
+//gerer l'affichage de la list ainsi que les espaces
         
            
-        }
     }
+    
+}
 
 
 
@@ -72,7 +75,7 @@ extension Plats { // extraction (suite de la struct PlatsLabels)
     
             ZStack (alignment: .topTrailing){
                 
-                Image("\(mainCourse.imageName)").resizable().frame(width: 335,height: 467).cornerRadius(11)
+                Image("\(mainCourse.imageName)").resizable().aspectRatio(contentMode:.fit).frame(width: 335,height: 467).cornerRadius(11)
                 
                 ZStack (alignment: .center){
                     
