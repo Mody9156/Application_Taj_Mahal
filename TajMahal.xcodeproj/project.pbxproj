@@ -94,12 +94,11 @@
 		42E9DCAC2AF11136007CE7D0 /* TajMahal */ = {
 			isa = PBXGroup;
 			children = (
-				23D7174C2B65324E0027701A /* Model */,
 				42E9DCC02AF11662007CE7D0 /* Info.plist */,
+				23D7174C2B65324E0027701A /* Model */,
 				42E9DCBB2AF113D1007CE7D0 /* Views */,
-				23D7174B2B6531080027701A /* ViewModel */,
 				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
-				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
+				23D7174B2B6531080027701A /* ViewModel */,
 				23DD31252B722DED00204383 /* Font */,
 				42E9DCB32AF11138007CE7D0 /* Preview Content */,
 			);
@@ -109,6 +108,7 @@
 		42E9DCB32AF11138007CE7D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
 				42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
