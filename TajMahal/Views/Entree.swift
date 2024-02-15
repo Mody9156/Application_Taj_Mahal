@@ -114,7 +114,7 @@ extension  Entree {
                                     
                 } label: {
             
-            Entreelabel(apetizer:apetizer) // strcut  Entreelabel ⇡
+            Entreelabel(apetizer:apetizer) // struct  Entreelabel ⇡
             
                 }.navigationTitle("")
             
