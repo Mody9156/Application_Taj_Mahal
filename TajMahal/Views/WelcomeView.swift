@@ -112,8 +112,8 @@ private func Spacing(for name : String) -> CGFloat { // CGFloat pour type float
 }//function de la struct BottomView ⇡
 
 
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        WelcomeView()
-    }
-}
+//struct WelcomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WelcomeView()
+//    }
+//}
