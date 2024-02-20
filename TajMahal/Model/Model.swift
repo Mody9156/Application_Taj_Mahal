@@ -6,14 +6,12 @@
 //
 
 import Foundation
-
 // Cette enumération répertorie 3 niveaux de piment
 enum SpiceLevel : String{
     case light = "light"
     case medium = "medium"
     case hot = "hot"
 }
-
 // Représente l'objet "plat", qui figure sur la carte du menu
 struct Dish : Identifiable{
     let id = UUID()
