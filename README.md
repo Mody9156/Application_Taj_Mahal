@@ -35,15 +35,13 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 
 ## Screenshots
 
-
-
-| 
 <div align="center">
+| 
 <p align="center"><img src="Screen_un.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_deux.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_trois.png" width="100" alt="Screen"></p>
-</div> |
+|
 |:---:|:---:|:---:|
 | **Home screen** | **Menu** | **Details of the dishes**
-
+</div> 
 Contribution
 
 We encourage contributions to this project. To contribute, follow these steps:
