@@ -1,6 +1,7 @@
 
 <p align="center">
-    <img src="icone.png" width="100" alt="icone" style ="border-radius: 10px;">
+    <img src="icone.png" width="100" alt="icone" style="border-radius: 50%;">
+
 </p>
  
 <h1> Taj Mahal </h1>
