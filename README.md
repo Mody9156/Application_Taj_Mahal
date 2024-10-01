@@ -3,7 +3,8 @@
     <img src="icone.png" width="50" alt="icone">
 </p>
  
-<h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
+<h1> Taj Mahal </h1>
+# iOS Development with Xcode, Swift, and SwiftUI
 
 ## Description
 This project aims to put your iOS development skills into practice by creating an application using Xcode, the Swift programming language, and the SwiftUI framework. You will also learn how to manage source code with Git and GitHub for collaborative development.
@@ -36,7 +37,7 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 ## Screenshots
 
 
-| <p align="center"><p align="center"><img src="Screen_un.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_deux.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_trois.png" width="100" alt="Screen"></p></p>  |
+| <p align="center"><img src="Screen_un.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_deux.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_trois.png" width="100" alt="Screen"></p> |
 |:---:|:---:|:---:|
 | **Home screen** | **Menu** | **Details of the dishes**
 
