@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="Icône.png" width="50">
+    <img src="Icône.png" width="50" alt="icone">
 </p>
  
 <h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
@@ -37,7 +37,7 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 
 
 
-| <p align="center"><img src="Screen_un.png" width="50"></p> | <p align="center"><img src="Screen_deux.png" width="50"></p> | <p align="center"><img src="Screen_trois.png" width="50"></p> |
+| <p align="center"><img src="Screen_un.png" width="50" alt="Screen"></p> | <p align="center"><img src="Screen_deux.png" width="50" alt="Screen"></p> | <p align="center"><img src="Screen_trois.png" width="50" alt="Screen"></p> |
 |:---:|:---:|:---:|
 
 
