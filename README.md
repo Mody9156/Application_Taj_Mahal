@@ -1,6 +1,5 @@
 
-![Texte alternatif](/Users/keita/Downloads/16998882472545_Icône d'application.png)
-
+<img src="/Users/keita/Downloads/16998882472545_Icône d'application.png" width="200">
 # iOS Development with Xcode, Swift, and SwiftUI
 
 ## Description
@@ -33,7 +32,8 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 
 ## Screenshots
 
-| <p align="center"><img src="Images/Simulator_Screenshot_1.png" width="200"></p> | <p align="center"><img src="Images/Simulator_Screenshot_2.png" width="200"></p> | <p align="center"><img src="Images/Simulator_Screenshot_3.png" width="200"></p> |
+
+| <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.51.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.58.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.33.01.png" width="200"></p> |
 |:---:|:---:|:---:|
 
 
