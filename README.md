@@ -5,7 +5,7 @@
 
 </p>
  
-<h1> Taj Mahal </h1>
+# Taj Mahal
 # iOS Development with Xcode, Swift, and SwiftUI
 
 ## Description
@@ -39,7 +39,7 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 ## Screenshots
 
 
-| <p align="center"><img src="Screen_un.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_deux.png" width="100" alt="Screen"></p> | <p align="center"><img src="Screen_trois.png" width="100" alt="Screen"></p> |
+| <p align="center"><img src="Home.png" width="200" alt="Screen"></p> | <p align="center"><img src="List.png" width="200" alt="Screen"></p> | <p align="center"><img src="Details.png" width="200" alt="Screen"></p> |
 |:---:|:---:|:---:|
 | **Home screen** | **Menu** | **Details of the dishes**
 
