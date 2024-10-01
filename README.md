@@ -1,6 +1,6 @@
 
-<p align="center">
-    <img src="icone.png" width="100" alt="icone" style="border-radius: 50%;">
+<p align="center"  style="border-radius: 50%;">
+    <img src="icone.png" width="100" alt="icone">
 
 </p>
  
