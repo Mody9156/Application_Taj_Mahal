@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="Icône.png" width="50" alt="icone">
+    <img src="icone.png" width="50" alt="icone">
 </p>
  
 <h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
