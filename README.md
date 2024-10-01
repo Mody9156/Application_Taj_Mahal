@@ -1,5 +1,5 @@
 
-<img src="/Users/keita/Downloads/16998882472545_Icône d'application.png" width="200">
+<img src="TajMahal/Preview Content/AppIcon.appiconset/Icône d'application.png" width="200">
 # iOS Development with Xcode, Swift, and SwiftUI
 
 ## Description
