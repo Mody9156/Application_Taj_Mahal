@@ -1,6 +1,6 @@
 
 <div align="left">
-    <img src="Icône d'application.png" width="50" >
+    <img src="Icône.png" width="50" >
 </div>
 
 <h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
