@@ -1,6 +1,6 @@
 
-<div align="center">
-    <img width="100" height="100" src="Icône d'application.png" style="margin-right: -15px;">
+<div align="left">
+    <img width="50" src="Icône d'application.png" style="margin-right: -15px;">
 </div>
 # iOS Development with Xcode, Swift, and SwiftUI
 
