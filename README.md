@@ -33,7 +33,8 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 ## Screenshots
 
 
-| <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.51.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.58.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.33.01.png" width="200"></p> |
+
+| <p align="center"><img src="Image/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.51.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.32.58.png" width="200"></p> | <p align="center"><img src="/Users/keita/Desktop/Simulator Screen Shot - iPhone 14 Pro Max - 2024-10-01 at 11.33.01.png" width="200"></p> |
 |:---:|:---:|:---:|
 
 
