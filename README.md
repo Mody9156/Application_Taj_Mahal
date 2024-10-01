@@ -2,7 +2,7 @@
 <div align="left">
     <img width="50" src="Icône d'application.png" style="margin-right: -15px;">
 </div>
-# iOS Development with Xcode, Swift, and SwiftUI
+<h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
 
 ## Description
 This project aims to put your iOS development skills into practice by creating an application using Xcode, the Swift programming language, and the SwiftUI framework. You will also learn how to manage source code with Git and GitHub for collaborative development.
