@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="icone.png" width="50" alt="icone">
+    <img src="icone.png" width="100" alt="icone">
 </p>
  
 <h1> Taj Mahal </h1>
