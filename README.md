@@ -1,7 +1,7 @@
 
-<div align="left">
+<p align="center">
     <img src="Icône.png" width="50" >
-</div>
+</p>
 
 <h1># iOS Development with Xcode, Swift, and SwiftUI</h1>
 
