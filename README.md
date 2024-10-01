@@ -1,5 +1,5 @@
 
-<img src="TajMahal/Preview Content/AppIcon.png" width="200">
+<img src="Icône d'application.png" width="200">
 # iOS Development with Xcode, Swift, and SwiftUI
 
 ## Description
