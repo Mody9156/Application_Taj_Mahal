@@ -1,6 +1,6 @@
 
 <p align="center"   style="border-radius: 10px; display: block;">
-    <img src="icone.png" width="100" alt="icone">
+    <img src="Screenshots/icone.png" width="100" alt="icone">
 
 
 </p>
@@ -39,7 +39,7 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 ## Screenshots
 
 
-| <p align="center"><img src="Home.png" width="200" alt="Screen"></p> | <p align="center"><img src="List.png" width="200" alt="Screen"></p> | <p align="center"><img src="Details.png" width="200" alt="Screen"></p> |
+| <p align="center"><img src="Home.png" width="200" alt="Home"></p> | <p align="center"><img src="List.png" width="200" alt="List"></p> | <p align="center"><img src="Details.png" width="200" alt="Details"></p> |
 |:---:|:---:|:---:|
 | **Home screen** | **Menu** | **Details of the dishes**
 
