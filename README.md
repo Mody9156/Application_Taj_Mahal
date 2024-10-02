@@ -43,7 +43,7 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 |:---:|:---:|:---:|
 | **Home screen** | **Menu** | **Details of the dishes**
 
-Contribution
+## Contribution
 
 We encourage contributions to this project. To contribute, follow these steps:
 
@@ -55,7 +55,7 @@ git checkout -b your-branch-name
 3. Make your modifications in your branch.
 4. Submit a pull request for your changes to be reviewed and merged into the main project.
 
-Disclaimer
+## Disclaimer
 This project is provided for educational and example purposes. It serves as a foundation for developing iOS applications with Swift and SwiftUI but does not represent a complete application.
 
 License
