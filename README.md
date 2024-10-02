@@ -16,7 +16,7 @@ This project aims to put your iOS development skills into practice by creating a
 - Manage source code with Git and GitHub.
 - Integrate specific features for a restaurant application, such as:
   - Displaying menus.
-  - Table reservations.
+  - Showing dish details and restaurant front.
 
 ## Prerequisites
 - A computer running macOS.
