@@ -1,42 +1,39 @@
-
-<p align="center"   style="border-radius: 10px; display: block;">
+<p align="center" style="border-radius: 10px; display: block;">
     <img src="Screenshots/icone.png" width="100" alt="icone">
-
-
 </p>
- 
+
 # Taj Mahal
-# iOS Development with Xcode, Swift, and SwiftUI
+# Développement iOS avec Xcode, Swift et SwiftUI
 
 ## Description
-This project aims to put your iOS development skills into practice by creating an application using Xcode, the Swift programming language, and the SwiftUI framework. You will also learn how to manage source code with Git and GitHub for collaborative development.
+Ce projet vise à mettre en pratique vos compétences en développement iOS en créant une application à l'aide d'Xcode, du langage de programmation Swift et du framework SwiftUI. Vous apprendrez également à gérer le code source avec Git et GitHub pour le développement collaboratif.
 
-## Features
-- Create an attractive and interactive user interface with SwiftUI.
-- Manage source code with Git and GitHub.
-- Integrate specific features for a restaurant application, such as:
-  - Displaying menus.
-  - Showing dish details and restaurant front.
+## Fonctionnalités
+- Créer une interface utilisateur attractive et interactive avec SwiftUI.
+- Gérer le code source avec Git et GitHub.
+- Intégrer des fonctionnalités spécifiques pour une application de restaurant, telles que :
+  - Affichage des menus.
+  - Affichage des détails des plats et de la devanture du restaurant.
 
-## Prerequisites
-- A computer running macOS.
-- The latest version of Xcode, available for free from the App Store.
-- A good understanding of Swift and iOS development concepts.
+## Prérequis
+- Un ordinateur fonctionnant sous macOS.
+- La dernière version d'Xcode, disponible gratuitement sur l'App Store.
+- Une bonne compréhension de Swift et des concepts de développement iOS.
 
-## Recommended Development Environment
-Xcode is the Integrated Development Environment (IDE) developed by Apple, specifically designed for developing iOS applications. It is highly recommended for this project.
+## Environnement de développement recommandé
+Xcode est l'environnement de développement intégré (IDE) développé par Apple, spécialement conçu pour le développement d'applications iOS. Il est fortement recommandé pour ce projet.
 
-## Usage
-1. Clone the GitHub repository of the project to your local machine:
+## Utilisation
+1. Clonez le dépôt GitHub du projet sur votre machine locale:
    ```bash
    git clone https://github.com/your-username/your-repository.git
 
-2. Open the project in Xcode using the .xcworkspace file.
-3. Explore the source code and familiarize yourself with the project structure.
-4. Make any necessary modifications based on your needs.
-5. Run the application on the iOS simulator or on your personal iOS device to test its features.
+2. Ouvrez le projet dans Xcode en utilisant le fichier .xcworkspace file.
+3. Explorez le code source et familiarisez-vous avec la structure du projet.
+4. Apportez les modifications nécessaires en fonction de vos besoins.
+5. Exécutez l'application sur le simulateur iOS ou sur votre appareil iOS personnel pour tester ses fonctionnalités.
 
-## Screenshots
+## Captures d'écran
 
 
 | <p align="center"><img src="Screenshots/Home.png" width="200" alt="Home"></p> | <p align="center"><img src="Screenshots/List.png" width="200" alt="List"></p> | <p align="center"><img src="Screenshots/Details.png" width="200" alt="Details"></p> |
@@ -45,19 +42,19 @@ Xcode is the Integrated Development Environment (IDE) developed by Apple, specif
 
 ## Contribution
 
-We encourage contributions to this project. To contribute, follow these steps:
+Nous encourageons les contributions à ce projet. Pour contribuer, suivez ces étapes :
 
-1. Clone the GitHub repository to your local machine.
-2. Create a dedicated branch for your modifications:
-
+1. Clonez le dépôt GitHub sur votre machine locale.
+2. Créez une branche dédiée pour vos modifications :
+   
 git checkout -b your-branch-name
 
-3. Make your modifications in your branch.
-4. Submit a pull request for your changes to be reviewed and merged into the main project.
+4. Apportez vos modifications dans votre branche.
+5. Soumettez une pull request pour que vos changements soient examinés et intégrés au projet principal.
 
-## Disclaimer
-This project is provided for educational and example purposes. It serves as a foundation for developing iOS applications with Swift and SwiftUI but does not represent a complete application.
+## Avertissement
+Ce projet est fourni à des fins éducatives et comme exemple. Il sert de base pour le développement d'applications iOS avec Swift et SwiftUI, mais ne représente pas une application complète.
 
-License
-This project is licensed under the MIT License. Please refer to the LICENSE file for more details.
+Licence
+Ce projet est sous licence MIT. Veuillez consulter le fichier LICENSE pour plus de détails.
 
